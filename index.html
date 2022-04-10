@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-13</title>
+    <style>
+        .start-one {
+            width: 300px;
+            display: flex;
+            justify-content: space-evenly;
+            border: 2px solid red;
+            margin: auto;
+            background-color: #567fa0;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: rgb(232, 90, 90);">Take 3 inputs (number ) from the user and show minimum of
+        the three.</h1>
+    <div class="start-one">
+        <h1 id="one"></h1>
+        <h1 id="two"></h1>
+        <h1 id="three"></h1>
+    </div>
+    <div class="end-one">
+        <h2 id="four" style="color:rgb(5, 220, 248); text-align: center; font-size: 29px;"></h2>
+    </div>
+
+
+    <h1 style="text-align: center; color: rgb(232, 90, 90);">Check whether the given character is a vowel or not. (Also
+        check for capital characters).</h1>
+    <div class="start-one">
+        <h1 id="five"></h1>
+    </div>
+    <div class="end-two">
+        <h2 id="six" style="color:rgb(5, 220, 248); text-align: center; font-size: 29px;"></h2>
+    </div>
+
+
+    <h1 style="text-align: center; color: rgb(232, 90, 90);"> Write a program to print all even numbers less than or
+        equal to n (n is an input which we take using prompt).</h1>
+    <div class="start-one">
+        <h1 id="seven"></h1>
+    </div>
+    <i><h1 style="text-align: center; color: orange;">See Program In The Console -------</h1></i>
+    <!-- <div class="end-two">
+        <h2 id="eight" style="color:rgb(5, 220, 248); text-align: center; font-size: 29px;"></h2>
+    </div> -->
+
+
+    <h1 style="text-align: center; color: rgb(232, 90, 90);">Write a program to take an input from the user (number) and
+        check whether it is a prime number or not.</h1>
+    <div class="start-one">
+        <h1 id="nine"></h1>
+    </div>
+    <div class="end-two">
+        <h2 id="ten" style="color:rgb(5, 220, 248); text-align: center; font-size: 29px;"></h2>
+    </div>
+
+
+
+    <!-- <script src="index.js"></script> -->
+    <script>
+        // // --------------- Take 3 inputs (number ) from the user and show minimum of the three. ----------------
+
+        const firstNum = prompt("Enter Your First Number");
+        document.getElementById('one').innerHTML = firstNum;
+
+        const secondNum = prompt("Enter Your Second Number");
+        document.getElementById('two').innerHTML = secondNum;
+
+        const thirdNum = prompt("Enter Your Third Number");
+        document.getElementById('three').innerHTML = thirdNum;
+
+        if (firstNum > secondNum && firstNum > thirdNum) {
+            const prresult = document.getElementById('four');
+            prresult.innerText = "First Number is Greater";
+        }
+        else if (secondNum > firstNum && secondNum > thirdNum) {
+            const prresult = document.getElementById('four');
+            prresult.innerText = "Second Number is Greater";
+        } else {
+            const prresult = document.getElementById('four');
+            prresult.innerText = "Third Number is Greater";
+        }
+
+
+
+        // ------------- Check whether the given character is a vowel or not. (Also check for capital characters). -------------
+
+        const vowel = prompt("Enter Your Alphabet");
+        const getvowel = document.getElementById('five');
+        getvowel.innerText = vowel;
+
+        if (vowel == 'a' || vowel == 'e' || vowel == 'i' || vowel == 'o' || vowel == 'u' || vowel == 'A' || vowel == 'E' || vowel == 'I' || vowel == 'O' || vowel == 'U') {
+            const prvowel = document.getElementById('six');
+            prvowel.innerText = vowel + ' is a Vowel';
+        }
+        else if (vowel == 'b' || vowel == 'c' || vowel == 'd' || vowel == 'f' || vowel == 'g' || vowel == 'h' || vowel == 'j' || vowel == 'k' || vowel == 'l' || vowel == 'm' || vowel == 'n' || vowel == 'p' || vowel == 'q' || vowel == 'r' || vowel == 's' || vowel == 't' || vowel == 'v' || vowel == 'w' || vowel == 'x' || vowel == 'y' || vowel == 'z' || vowel == 'B' || vowel == 'C' || vowel == 'D' || vowel == 'F' || vowel == 'G' || vowel == 'H' || vowel == 'J' || vowel == 'K' || vowel == 'L' || vowel == 'M' || vowel == 'N' || vowel == 'P' || vowel == 'Q' || vowel == 'R' || vowel == 'S' || vowel == 'T' || vowel == 'V' || vowel == 'W' || vowel == 'X' || vowel == 'Y' || vowel == 'Z' ){
+            const prvowel = document.getElementById('six');
+            prvowel.innerText = vowel + ' is a Constant';
+        }
+        else {
+            const prvowel = document.getElementById('six');
+            prvowel.innerText = vowel + ' is a Number';
+        }
+
+
+
+        // ----------------- Write a program to print all even numbers less than or equal to n (n is an input which we take using prompt) -----------------
+
+        const evenNum = prompt('Enter Your Number For Check Even Or Not');
+        const getEvenNum = document.getElementById('seven');
+        getEvenNum.innerText = evenNum;
+
+        for (let i = 0; i <= evenNum; i++) {
+            if (i%2 == 0) {
+                // const prEvenNum = document.getElementById('eight');
+                // prEvenNum.innerText = i + "\n";
+                console.log(i);
+            }
+        }
+
+
+
+        // ----------------- Write a program to take an input from the user (number) and check whether it is a prime number or not. -------------------
+
+
+        const prime = prompt('Enter Your Number For Check Number Prime Or Not');
+        const getPrime = document.getElementById('nine');
+        getPrime.innerText = prime;
+        chk = 0;
+        for (i = 2; i < prime; i++) {
+            if (prime % 2 == 0) {
+                chk++;
+                break;
+            }
+        }
+        if (chk == 0) {
+            const prPrime = document.getElementById('ten');
+            prPrime.innerText = prime + " is a Prime Number";
+        }
+        else {
+            const prPrime = document.getElementById('ten');
+            prPrime.innerText = prime + " is not a Prime Number";
+        }
+    </script>
+
+
+</body>
+
+</html>
